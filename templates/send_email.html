@@ -1,20 +1,27 @@
 {% extends "index.html" %}
 {% block title %}Создание письма{% endblock %}
 {% block content %}
-<h1>Отправка сообщений</h1>
+<h2>Отправка сообщений по времени</h2>
 <form method="POST" action="/response">
   <div class="form-group">
-    <label class="mt-2">E-mail получателя:
-      <input type="email" name="email" required>
-    </label>
-    <label class="mt-2">Время (сек):
-      <input type="number" size="3" name="timer" required>
-    </label> <br>
-    <label class="mt-2">Текст сообщения:
-      <textarea rows="2" cols="45" name="text"required></textarea>
-    </label> <br>
+    <table class="table">
+      <tr>
+        <td><label class="mt-2">E-mail получателя:</label></td>
+        <td><input type="email" name="email" id="email" required></td>
+      </tr>
+      <tr>
+        <td><label class="mt-2">Время (сек):</label></td>
+        <td><input type="number" size="3" name="timer" required></td>
+      </tr>
+      <tr>
+        <td><label class="mt-2">Текст сообщения:</label></td>
+        <td><textarea rows="2" cols="45" name="text"required></textarea></td>
+      </tr>
+    </table>
   </div>
   <br>
   <input type="submit" value="Отправить">
 </form>
+<br>
+<a href="/tasks">Посмотреть список сообщений</a>
 {% endblock %}
