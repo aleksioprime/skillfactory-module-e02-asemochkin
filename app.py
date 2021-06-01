@@ -21,5 +21,5 @@ def last_tasks():
     emails = get_tasks()
     return render_template("list_emails.html", emails=emails)
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
