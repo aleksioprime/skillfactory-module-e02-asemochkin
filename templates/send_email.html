@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+{% block title %}Создание письма{% endblock %}
+{% block content %}
+<h1>Отправка сообщений</h1>
+<form method="POST" action="/response">
+  <div class="form-group">
+    <label class="mt-2">E-mail получателя:
+      <input type="email" name="email" required>
+    </label>
+    <label class="mt-2">Время (сек):
+      <input type="number" size="3" name="timer" required>
+    </label> <br>
+    <label class="mt-2">Текст сообщения:
+      <textarea rows="2" cols="45" name="text"required></textarea>
+    </label> <br>
+  </div>
+  <br>
+  <input type="submit" value="Отправить">
+</form>
+{% endblock %}
